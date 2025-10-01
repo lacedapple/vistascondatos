@@ -1,8 +1,27 @@
-﻿@{
+﻿@model LibreriaVistas.HojaPresentacion;
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1 class="text-center">@Model.Plantel</h1>
+<h2 class="text-center">@Model.NombrePlantel</h2>
+<h3 class="text-center">@Model.Carrera</h3>
+<h3 class="text-center"><span>@Model.Semestre</span> <span>@Model.Grupo</span></h3>
+<h3 class="text-center">Alumnos:</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+        <th>Número de control</th>
+        <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(LibreriaVistas.Alumno alumno in Model.Alumnos) {
+        <tr>
+    <td>@alumno.NumeroControl</td>
+    <td>@alumno.Nombre</td>
+    </tr>
+}
+    </tbody>
+</table>
