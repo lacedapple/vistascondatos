@@ -1,0 +1,11 @@
+@model List<LibreriaVistas.Tarjeta>
+<h1 class="text-center">Canciones</h1>
+
+<div class="row">
+@foreach (LibreriaVistas.Tarjeta cancion in Model){
+    <div class="col-md-3">
+       <partial name="Cancion" model ="@cancion"/>
+    </div>
+
+}
+</div>

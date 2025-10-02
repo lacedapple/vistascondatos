@@ -1,0 +1,10 @@
+@model LibreriaVistas.Tarjeta;
+
+<div class="card">
+  <img src="@Model.Imagen" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Titulo</h5>
+    <p class="card-text">@Model.Descripcion</p>
+    <p>Por @Model.Autor el @Model.Fecha</p>
+  </div>
+</div>
